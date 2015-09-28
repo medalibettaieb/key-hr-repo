@@ -14,7 +14,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-import services.interfaces.CalculatorServiceRemote;
+import training.services.interfaces.CalculatorServiceRemote;
 
 public class CalculatorApp extends JFrame {
 

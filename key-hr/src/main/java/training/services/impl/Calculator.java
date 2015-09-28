@@ -1,8 +1,8 @@
-package services.impl;
+package training.services.impl;
 
 import javax.ejb.Stateless;
 
-import services.interfaces.CalculatorRemote;
+import training.services.interfaces.CalculatorRemote;
 
 /**
  * Session Bean implementation class Calculator

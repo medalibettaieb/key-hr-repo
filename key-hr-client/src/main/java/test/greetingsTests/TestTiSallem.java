@@ -4,7 +4,7 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 
-import services.interfaces.IGreetingsRemote;
+import training.services.interfaces.IGreetingsRemote;
 
 public class TestTiSallem {
 	public static void main(String[] args) {

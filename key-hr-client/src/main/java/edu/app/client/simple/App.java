@@ -4,7 +4,7 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 
-import services.interfaces.CalculatorServiceRemote;
+import training.services.interfaces.CalculatorServiceRemote;
 
 public class App {
 

@@ -1,8 +1,8 @@
-package services.impl;
+package training.services.impl;
 
 import javax.ejb.Stateless;
 
-import services.interfaces.CalculatorServiceRemote;
+import training.services.interfaces.CalculatorServiceRemote;
 
 @Stateless
 public class CalculatorService implements CalculatorServiceRemote {
