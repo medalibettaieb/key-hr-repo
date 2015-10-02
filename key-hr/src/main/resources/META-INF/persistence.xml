@@ -5,6 +5,18 @@
 	<persistence-unit name="key-hr">
 		<jta-data-source>java:jboss/datasources/keyHrDS</jta-data-source>
 		<class>entities.Employee</class>
+		<class>entities.training.manyToManyBi.K</class>
+		<class>entities.training.oneToManyBi.E</class>
+		<class>entities.training.oneToManyBi.F</class>
+		<class>entities.training.oneToManyBi.G</class>
+		<class>entities.training.oneToManyBi.H</class>
+		<class>entities.training.oneToManyBi.I</class>
+		<class>entities.training.oneToManyBi.J</class>
+		<class>entities.training.oneToOneBi.A</class>
+		<class>entities.training.oneToOneBi.B</class>
+		<class>entities.training.oneToOneUni.C</class>
+		<class>entities.training.oneToOneUni.D</class>
+		<class>entities.training.manyToManyBi.L</class>
 		<properties>
 			<property name="hibernate.hbm2ddl.auto" value="create" />
 			<property name="hibernate.show_sql" value="true" />
