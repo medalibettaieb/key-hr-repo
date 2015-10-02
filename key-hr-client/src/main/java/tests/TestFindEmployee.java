@@ -15,8 +15,8 @@ public class TestFindEmployee {
 		EmployeeServicesRemote proxy = (EmployeeServicesRemote) context
 				.lookup(jndiName);
 
-		Employee employee = proxy.findEmployeeById(2);
-		System.out.println(employee.getName());
+		Employee employee = proxy.findEmployeeById(3);
+		System.out.println(employee);
 	}
 
 }

@@ -2,10 +2,12 @@ package entities;
 
 import java.io.Serializable;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -19,11 +21,18 @@ public class Employee implements Serializable {
 	private Integer id;
 	private String name;
 
+	private Department department;
+
 	public Employee() {
 	}
 
 	public Employee(String name) {
 		this.name = name;
+	}
+
+	@Override
+	public String toString() {
+		return "Employee [name=" + name + ", department=" + department.getName() + "]";
 	}
 
 	@Id
@@ -42,6 +51,15 @@ public class Employee implements Serializable {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	@ManyToOne(cascade=CascadeType.MERGE)
+	public Department getDepartment() {
+		return department;
+	}
+
+	public void setDepartment(Department department) {
+		this.department = department;
 	}
 
 }

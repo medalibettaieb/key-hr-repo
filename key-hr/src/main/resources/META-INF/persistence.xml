@@ -17,6 +17,7 @@
 		<class>entities.training.oneToOneUni.C</class>
 		<class>entities.training.oneToOneUni.D</class>
 		<class>entities.training.manyToManyBi.L</class>
+		<class>entities.Department</class>
 		<properties>
 			<property name="hibernate.hbm2ddl.auto" value="create" />
 			<property name="hibernate.show_sql" value="true" />

@@ -7,6 +7,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 
+import services.interfaces.EmployeeServicesLocal;
 import services.interfaces.EmployeeServicesRemote;
 import entities.Employee;
 
@@ -14,7 +15,7 @@ import entities.Employee;
  * Session Bean implementation class EmployeeServices
  */
 @Stateless
-public class EmployeeServices implements EmployeeServicesRemote {
+public class EmployeeServices implements EmployeeServicesRemote ,EmployeeServicesLocal {
 	@PersistenceContext
 	private EntityManager entityManager;
 
