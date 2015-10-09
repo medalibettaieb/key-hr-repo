@@ -1,8 +1,11 @@
 package training.services.impl;
 
+import java.util.List;
+
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 
 import training.entities.Participation;
 import training.entities.Player;
@@ -34,6 +37,15 @@ public class ParticipationServices implements ParticipationServicesRemote {
 		} catch (Exception e) {
 		}
 		return b;
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Team> findTeamsByPlayerId(Integer idPlayer) {
+		String jpql = "select t from Team t join t.participations ts where ts.player.id=:param";
+		Query query = entityManager.createQuery(jpql);
+		query.setParameter("param", idPlayer);
+		return query.getResultList();
 	}
 
 }
