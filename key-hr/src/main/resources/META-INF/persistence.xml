@@ -4,25 +4,12 @@
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
 	<persistence-unit name="key-hr">
 		<jta-data-source>java:jboss/datasources/keyHrDS</jta-data-source>
-		<class>entities.training.manyToManyBi.K</class>
-		<class>entities.training.manyToManyBi.L</class>
-		<class>entities.training.oneToManyBi.E</class>
-		<class>entities.training.oneToManyBi.F</class>
-		<class>entities.training.oneToManyBi.G</class>
-		<class>entities.training.oneToManyBi.H</class>
-		<class>entities.training.oneToManyBi.I</class>
-		<class>entities.training.oneToManyBi.J</class>
-		<class>entities.training.oneToOneBi.A</class>
-		<class>entities.training.oneToOneBi.B</class>
-		<class>entities.training.oneToOneUni.C</class>
-		<class>entities.training.oneToOneUni.D</class>
-		<class>training.entities.Participation</class>
-		<class>training.entities.ParticipationId</class>
-		<class>training.entities.Player</class>
-		<class>training.entities.Team</class>
-		<class>entities.User</class>
+		<class>entities.Decision</class>
+		<class>entities.DecisionID</class>
 		<class>entities.Employee</class>
+		<class>entities.Leave</class>
 		<class>entities.RhManager</class>
+		<class>entities.User</class>
 		<properties>
 			<property name="hibernate.hbm2ddl.auto" value="create" />
 			<property name="hibernate.show_sql" value="true" />
