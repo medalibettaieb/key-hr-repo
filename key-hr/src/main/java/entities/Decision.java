@@ -3,6 +3,7 @@ package entities;
 import java.io.Serializable;
 import java.util.Date;
 
+import javax.persistence.CascadeType;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
@@ -72,7 +73,7 @@ public class Decision implements Serializable {
 		this.user = user;
 	}
 
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.MERGE)
 	@JoinColumn(name = "idLeave", referencedColumnName = "id", updatable = false, insertable = false)
 	public Leave getLeave() {
 		return leave;

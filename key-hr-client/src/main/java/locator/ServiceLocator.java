@@ -8,15 +8,14 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 
 public class ServiceLocator {
-	private Context context;
-	private Map<String, Object> map;
-
+	private static Context context;
+	private static Map<String, Object> map;
 	private static ServiceLocator instance;
 
 	public ServiceLocator() {
-		map = new HashMap<String, Object>();
 		try {
 			context = new InitialContext();
+			map = new HashMap<String, Object>();
 		} catch (NamingException e) {
 			e.printStackTrace();
 		}
@@ -29,20 +28,18 @@ public class ServiceLocator {
 		return instance;
 	}
 
-	public Object getProxy(String jndiNam) {
-		Object proxy = null;
-		proxy = map.get(jndiNam);
-		if (proxy == null) {
+	public synchronized Object getProxy(String jndiName) {
+		Object object = null;
+		object = map.get(jndiName);
+		if (object == null) {
 			try {
-				proxy = context.lookup(jndiNam);
+				object = context.lookup(jndiName);
+				map.put(jndiName, object);
 			} catch (NamingException e) {
 				e.printStackTrace();
 			}
-			map.put(jndiNam, proxy);
 		}
-
-		return proxy;
-
+		return object;
 	}
 
 }
